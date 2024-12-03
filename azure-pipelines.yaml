@@ -1,6 +1,8 @@
 ---
 pool: 
-  vmImage: 
+  vmImage: ubuntu-24.04
+trigger: 
+  - main
 
 stages:
   - stage: buildjob
@@ -10,7 +12,7 @@ stages:
           - task: Maven@4
             inputs:
               mavenPomFile: pom.xml
-              goals: mvn clean package
+              goals: mvn package
               javaHomeOption: '1.17'
 
   

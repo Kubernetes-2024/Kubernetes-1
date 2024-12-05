@@ -1,0 +1,19 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: activity5
+spec:
+  containers:
+    - name: web
+      image: nginx:1.27
+    - name: logger
+      image: alpine
+      args:
+        - sleep
+        - 1d
+      env:
+        - name: USERNAME
+          value: admin
+        - name: PASSWORD
+          value: admin@123

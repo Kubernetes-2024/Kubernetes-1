@@ -1,0 +1,12 @@
+apiVersion: V1
+kind: Pod
+metadata:
+  name: activity-2
+spec:
+  containers:
+    - name: web
+      image: nginx:1.27
+    - name: busybox
+      image: busybox:1.37
+
+      

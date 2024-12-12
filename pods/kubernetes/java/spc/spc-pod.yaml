@@ -6,6 +6,7 @@ metadata:
   labels:
     env: Dev
     app: spc
+    
 spec:
   containers:
     - name: spcapp

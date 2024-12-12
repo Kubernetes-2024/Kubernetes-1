@@ -1,0 +1,16 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: spc-svc
+  labels:
+    app: spc
+spec:
+  type: NodePort 
+# node port should allways be b/w 30000-32767
+  selector:
+    app: spc
+    env: dev
+  ports:
+    - port: 8080
+      targetPort: 8080 

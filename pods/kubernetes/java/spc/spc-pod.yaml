@@ -1,12 +1,14 @@
 ---
 apiVersion: v1
+
+
 kind: Pod
 metadata:
   name: spc
   labels:
     env: Dev
     app: spc
-    
+
 spec:
   containers:
     - name: spcapp

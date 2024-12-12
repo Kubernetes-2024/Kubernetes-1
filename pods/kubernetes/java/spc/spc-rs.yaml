@@ -13,7 +13,7 @@ spec:
     matchLabels:
       app: spc
       env: dev
-
+# template is nothing but information about pod
   template:
     metadata:
       labels:

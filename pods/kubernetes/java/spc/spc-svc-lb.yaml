@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: LoadBalancer
+metadata:
+  name: spc-svc
+  labels:
+    app: spc-lb
+
+spec:
+  type: LoadBalancer
+  selector:
+    app: spc
+  ports:
+    - port: 8080
+      targetPort: 8080

@@ -30,6 +30,7 @@ spec:
       volumeMounts:
         - name: libdb
           mountPath: /var/lib/mysql
+  # name should be matched b/w volumeMount and Volumes
   volumes:
     - name: libdb
       persistentVolumeClaim:

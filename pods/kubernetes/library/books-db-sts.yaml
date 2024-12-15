@@ -49,16 +49,17 @@ spec:
             - name: booksdb-vol
               mountPath: /var/lib/postgresql/data
               subPath: data
-      volumeClaimTemplates:
-        - metadata:
-            name: booksdb-vol
-          spec:
-            accessModes:
-              - ReadWriteOnce
-            storageClassName: managed
-            resources:
-              requests:
-                storage: 1Gi
+
+  volumeClaimTemplates:
+    - metadata:
+        name: booksdb-vol
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        storageClassName: managed
+        resources:
+          requests:
+            storage: 1Gi
       
 
 ---

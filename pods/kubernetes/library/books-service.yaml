@@ -56,16 +56,16 @@ spec:
                 - /bin/sh
                 - -c
                 - ps aux | grep uvicorn
-                
+
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: users-svc
+  name: books-svc
 spec:
   type: ClusterIP
   selector:
-    app: users-svc
+    app: books-svc
   ports:
   - port: 8000
     targetPort: 8000

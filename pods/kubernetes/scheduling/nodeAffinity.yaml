@@ -6,6 +6,17 @@ metadata:
   labels:
     name: nginx
 spec:
+  affinity:
+    nodeAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+        NodeSelectorTerm:
+          - matchExpressions:
+              - key: env
+                operator: In
+                values:
+                  - prod
+                  - qa
+                  
   nodeSelector:
     env: dev
   containers:
